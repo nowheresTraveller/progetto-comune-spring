@@ -14,7 +14,7 @@
 
 	<h1>Comune di Casapulla</h1>
 	
-	 <a href="/progetto-login/loginDipendente">
+	 <a href="/progetto-comune/loginDipendente">
         		<input  id="login_dipendente" type="button" value="login dipendente" />
      </a>
 		 
@@ -32,10 +32,10 @@
 			<form:input type="text" path="cognome" required="required"/>
 		</div>
 		<div>
-			<form:label path="data_di_nascita">data di nascita</form:label>
+			<form:label path="dataNascita">data di nascita</form:label>
             <form:input type="text" path="dataNascita" required="required"/>
 
-			<form:label path="codice_fiscale">codice fiscale</form:label>
+			<form:label path="codiceFiscale">codice fiscale</form:label>
 			<form:input type="text" path="codiceFiscale" required="required"/>
 		</div>
 		<div>

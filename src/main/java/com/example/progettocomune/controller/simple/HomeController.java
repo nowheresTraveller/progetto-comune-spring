@@ -22,8 +22,9 @@ public class HomeController {
     }
 
     @PostMapping("/inserisciCittadino")
-    public void inserisciCittadino(@ModelAttribute Cittadino newCittadino){
+    public String inserisciCittadino(@ModelAttribute Cittadino newCittadino){
         cittadinoDao.insert(newCittadino);
+        return "redirect:/home";
     }
 
 

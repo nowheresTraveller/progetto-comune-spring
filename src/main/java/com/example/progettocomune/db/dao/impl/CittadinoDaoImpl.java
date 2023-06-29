@@ -6,6 +6,7 @@ import com.example.progettocomune.db.entity.Dipendente;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
 import java.util.List;
 
 public class CittadinoDaoImpl implements CittadinoDao {
@@ -30,11 +31,13 @@ public class CittadinoDaoImpl implements CittadinoDao {
     }
 
     @Override
+    @Transactional
     public void update(Cittadino cittadino) {
        manager.merge(cittadino);
     }
 
     @Override
+    @Transactional
     public void insert(Cittadino cittadino) {
         try {
             manager.persist(cittadino);
@@ -55,6 +58,7 @@ public class CittadinoDaoImpl implements CittadinoDao {
     }
 
     @Override
+    @Transactional
     public Cittadino delete() {
         return null;
     }

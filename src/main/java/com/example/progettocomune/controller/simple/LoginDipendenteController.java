@@ -18,7 +18,7 @@ public class LoginDipendenteController {
     @Autowired
     private DipendenteDao dipendenteDao;
 
-    @GetMapping("/dipendenteLogin")
+    @GetMapping("/loginDipendente")
     public ModelAndView getDipendenteLoginPage (){
         return new ModelAndView ("login_dipendente","dipendente",new Dipendente());
     }
@@ -31,6 +31,6 @@ public class LoginDipendenteController {
             session.setAttribute("dipendente",dipendente);
             return "redirect:/pagDipendente";
         }
-        return "redirect:/dipendenteLogin";
+        return "redirect:/loginDipendente";
     }
 }
