@@ -12,7 +12,7 @@
 
    <h1>Registrazione dipendente</h1>
 
-	<form:form method="POST" action="doRegistration" modelAttribute="dipendenteDaRegistrare">
+	<form:form method="POST" action="doRegistration" modelAttribute="nuovoDipendente">
 		<div>
 			<form:label path="nome">nome</form:label>
 			<form:input type="text" path="nome" required="required" />
@@ -30,10 +30,10 @@
 			<form:input type="text" path="password" required="required"/>
 		</div>
 		<div>
-			<input type="submit" name="registrati"/>
-			<a href="/progetto-login/loginDip">
+		   	<a href="/progetto-login/loginDipendente">
                	<input  type="button" value="indietro" />
             </a>
+			<input type="submit" name="registrati"/>
 		</div>
 	</form:form>
 

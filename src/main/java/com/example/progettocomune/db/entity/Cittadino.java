@@ -49,4 +49,20 @@ public class Cittadino {
     public String getDataNascita() {
         return dataNascita;
     }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setCognome(String cognome) {
+        this.cognome = cognome;
+    }
+
+    public void setCodiceFiscale(String codiceFiscale) {
+        this.codiceFiscale = codiceFiscale;
+    }
+
+    public void setDataNascita(String dataNascita) {
+        this.dataNascita = dataNascita;
+    }
 }

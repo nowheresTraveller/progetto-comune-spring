@@ -13,19 +13,15 @@ public class Dipendente {
 
     private String nome;
     private String cognome;
-    @Column(name="codice_fiscale")
-    private String codiceFiscale;
-
     private String username;
     private String password;
 
     public Dipendente() {
     }
 
-    public Dipendente(String nome, String cognome, String codiceFiscale, String username, String password) {
+    public Dipendente(String nome, String cognome, String username, String password) {
         this.nome = nome;
         this.cognome = cognome;
-        this.codiceFiscale = codiceFiscale;
         this.username = username;
         this.password = password;
     }
@@ -42,9 +38,6 @@ public class Dipendente {
         return cognome;
     }
 
-    public String getCodiceFiscale() {
-        return codiceFiscale;
-    }
 
     public String getUsername() {
         return username;
@@ -52,5 +45,22 @@ public class Dipendente {
 
     public String getPassword() {
         return password;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setCognome(String cognome) {
+        this.cognome = cognome;
+    }
+
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

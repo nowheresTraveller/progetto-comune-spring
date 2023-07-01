@@ -14,7 +14,7 @@
 
     <h1>Login dipendendente</h1>
 
-    <form:form method="POST" action="loginAction" modelAttribute="dipendente">
+    <form:form method="POST" action="loginFunction" modelAttribute="dipendente">
         <div>
 			<form:label path="username">username</form:label>
 			<form:input type="text" path="username" required="required"/>
@@ -23,8 +23,8 @@
 			<form:input type="password" path="password" required="required"/>
 		</div>
 		<div>
-			<input type="submit" name="login"/>
-            <a href="/progetto-login/registrationPage">
+			<input type="submit" name="login" value="login"/>
+            <a href="/progetto-comune/registrationPage">
         		<input  type="button" value="registrati" />
 	        </a>
 	    </div>

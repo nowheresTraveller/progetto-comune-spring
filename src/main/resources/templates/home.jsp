@@ -22,6 +22,7 @@
 	<h3>Inserimento dati anagrafici </h1>
 		<br><br><br>
 
+
 	<form:form method="POST" action="inserisciCittadino" modelAttribute="cittadino">
 
 		<div>

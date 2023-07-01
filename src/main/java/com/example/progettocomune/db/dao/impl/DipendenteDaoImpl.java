@@ -6,7 +6,7 @@ import com.example.progettocomune.db.entity.Dipendente;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
-import java.util.List;
+
 
 public class DipendenteDaoImpl implements DipendenteDao {
 
@@ -23,6 +23,10 @@ public class DipendenteDaoImpl implements DipendenteDao {
     @Override
     @Transactional
     public void insert(Dipendente dipendente) {
-
+        try{
+            manager.persist(dipendente);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
 }
