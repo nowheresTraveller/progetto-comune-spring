@@ -11,9 +11,9 @@
 
 	<h1>Comune di Casapulla</h1>
 
-	 <a href="/progetto-login/home">
-        		<input  id="logout_button" type="button" value="logout" />
-     </a>
+			 <form:form method="POST" action="logoutAction" >
+        			<input type ="submit" name="logout" value="logout"/>
+       		 </form:form>
 
 
 	<table style="border: 1px solid black">
@@ -30,10 +30,10 @@
 			<td>${singoloCittadino.dataNascita}</td>
 			<td>${singoloCittadino.codiceFiscale}</td>
 			<td>
-				  <form:form method="POST" action="modificaCittadino" modelAttribute="${singoloCittadino}">
-        			<input type="submit" name="modifica" value="modifica"/>
-       		      </form:form>
-			</td>
+			      <a href="/progetto-comune/modCittadino/${singoloCittadino.nome}/${singoloCittadino.cognome}/${singoloCittadino.dataNascita}/${singoloCittadino.codiceFiscale}" >
+                    <button value="modifica">modifica</button>
+                  </a>
+		    </td>
 			<td>
 				 <form:form method="POST" action="cancellaCittadino" modelAttribute="${singoloCittadino}">
         			<input type ="submit" name="cancella" value="cancella"/>

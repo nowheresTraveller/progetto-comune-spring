@@ -16,8 +16,14 @@ public class DipendenteDaoImpl implements DipendenteDao {
 
     @Override
     public Dipendente selectByUserAndPass(String user, String pass) {
-        return manager.createQuery("select x from Dipendente x where x.username =:u and x.password =:p",Dipendente.class)
-                .setParameter("u",user).setParameter("p",pass).getSingleResult();
+
+        try {
+             return manager.createQuery("select x from Dipendente x where x.username =:u and x.password =:p", Dipendente.class)
+                     .setParameter("u", user).setParameter("p", pass).getSingleResult();
+         }catch(Exception e){
+             e.printStackTrace();
+         }
+        return null;
     }
 
     @Override

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
-public class PagDipendenteController {
+public class PagDipController {
 
     @Autowired
     private CittadinoDao cittadinoDao;
@@ -32,7 +32,15 @@ public class PagDipendenteController {
 
     @PostMapping("/modificaCittadino")
     public String getPagModificaCittadino (Model model){
-        Cittadino cittadino = (Cittadino )model.getAttribute("singoloCittadino");
+        Cittadino cittadino = (Cittadino)model.getAttribute("singoloCittadino");
+        model.addAttribute("singoloCittadino",cittadino);
         return "pag_dipendente_mod_citt";
+    }
+
+    @PostMapping("/logoutAction")
+    public String logout(HttpSession session){
+        session.removeAttribute("inSession");
+        session.removeAttribute("dipendente");
+        return "redirect:/home";
     }
 }

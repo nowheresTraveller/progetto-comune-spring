@@ -34,7 +34,6 @@
                            	<input  type="button" value="indietro" />
             </a>
 			<input type="submit" name="modifica"/>
-
 		</div>
 	</form:form>
 
